@@ -20,9 +20,7 @@
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   html { scroll-behavior: smooth; }
-
   body {
     background: var(--bg);
     color: var(--text);
@@ -31,7 +29,6 @@
     cursor: none;
   }
 
-  /* Custom cursor */
   .cursor {
     position: fixed;
     width: 10px; height: 10px;
@@ -55,7 +52,6 @@
     mix-blend-mode: difference;
   }
 
-  /* Noise texture overlay */
   body::before {
     content: '';
     position: fixed;
@@ -66,7 +62,6 @@
     opacity: 0.4;
   }
 
-  /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0;
     z-index: 100;
@@ -111,7 +106,6 @@
   }
   .nav-cta:hover { background: var(--accent2); color: var(--bg); box-shadow: var(--glow-g); }
 
-  /* HERO */
   .hero {
     min-height: 100vh;
     display: flex;
@@ -176,10 +170,7 @@
     -webkit-text-stroke: 2px var(--accent);
     text-shadow: none;
   }
-  .glitch {
-    position: relative;
-    display: inline-block;
-  }
+  .glitch { position: relative; display: inline-block; }
   .glitch::before, .glitch::after {
     content: attr(data-text);
     position: absolute;
@@ -296,7 +287,6 @@
     100% { left: 100%; }
   }
 
-  /* STATS BAR */
   .stats-bar {
     background: var(--surface);
     border-top: 1px solid var(--border);
@@ -306,17 +296,8 @@
     gap: 4rem;
     overflow: hidden;
   }
-  .stat-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    white-space: nowrap;
-  }
-  .stat-num {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 2rem;
-    color: var(--accent);
-  }
+  .stat-item { display: flex; align-items: center; gap: 1rem; white-space: nowrap; }
+  .stat-num { font-family: 'Bebas Neue', cursive; font-size: 2rem; color: var(--accent); }
   .stat-label {
     font-family: 'Space Mono', monospace;
     font-size: 0.6rem;
@@ -327,7 +308,6 @@
   }
   .stat-divider { width: 1px; background: var(--border); flex-shrink: 0; }
 
-  /* SECTIONS */
   section { padding: 6rem 4rem; }
   .section-label {
     font-family: 'Space Mono', monospace;
@@ -340,40 +320,18 @@
     gap: 1rem;
     margin-bottom: 1rem;
   }
-  .section-label::before {
-    content: '';
-    width: 30px; height: 1px;
-    background: var(--accent);
-  }
+  .section-label::before { content: ''; width: 30px; height: 1px; background: var(--accent); }
   .section-title {
     font-family: 'Bebas Neue', cursive;
     font-size: clamp(3rem, 6vw, 5rem);
     line-height: 1;
     margin-bottom: 1rem;
   }
-  .section-desc {
-    color: var(--muted);
-    max-width: 600px;
-    line-height: 1.8;
-    margin-bottom: 4rem;
-  }
+  .section-desc { color: var(--muted); max-width: 600px; line-height: 1.8; margin-bottom: 4rem; }
 
-  /* ABOUT */
-  .about {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
-    align-items: center;
-  }
-  .about-visual {
-    position: relative;
-    height: 400px;
-  }
-  .about-box {
-    position: absolute;
-    border: 1px solid var(--border);
-    background: var(--surface);
-  }
+  .about { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+  .about-visual { position: relative; height: 400px; }
+  .about-box { position: absolute; border: 1px solid var(--border); background: var(--surface); }
   .about-box.main {
     inset: 0;
     display: flex;
@@ -386,60 +344,16 @@
     text-shadow: var(--glow-r);
     letter-spacing: 8px;
   }
-  .about-box.main small {
-    font-size: 0.8rem;
-    letter-spacing: 4px;
-    color: var(--muted);
-    font-family: 'Space Mono', monospace;
-  }
-  .about-box.accent-box {
-    width: 120px; height: 120px;
-    top: -20px; right: -20px;
-    background: var(--accent);
-    z-index: -1;
-  }
-  .about-box.accent-box2 {
-    width: 80px; height: 80px;
-    bottom: -20px; left: -20px;
-    background: var(--accent2);
-    opacity: 0.3;
-    z-index: -1;
-  }
-  .pillars {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1px;
-    background: var(--border);
-    margin-top: 2rem;
-  }
-  .pillar {
-    background: var(--surface);
-    padding: 1.5rem;
-  }
-  .pillar-num {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 2.5rem;
-    color: var(--accent);
-    opacity: 0.3;
-  }
-  .pillar-title {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: var(--text);
-    margin: 0.5rem 0;
-  }
+  .about-box.main small { font-size: 0.8rem; letter-spacing: 4px; color: var(--muted); font-family: 'Space Mono', monospace; }
+  .about-box.accent-box { width: 120px; height: 120px; top: -20px; right: -20px; background: var(--accent); z-index: -1; }
+  .about-box.accent-box2 { width: 80px; height: 80px; bottom: -20px; left: -20px; background: var(--accent2); opacity: 0.3; z-index: -1; }
+  .pillars { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: var(--border); margin-top: 2rem; }
+  .pillar { background: var(--surface); padding: 1.5rem; }
+  .pillar-num { font-family: 'Bebas Neue', cursive; font-size: 2.5rem; color: var(--accent); opacity: 0.3; }
+  .pillar-title { font-family: 'Space Mono', monospace; font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; color: var(--text); margin: 0.5rem 0; }
   .pillar-text { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
 
-  /* HOW TO JOIN */
-  .join-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: var(--border);
-    margin-top: 1rem;
-  }
+  .join-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); margin-top: 1rem; }
   .join-step {
     background: var(--surface);
     padding: 2.5rem;
@@ -458,31 +372,11 @@
   }
   .join-step:hover::before { transform: scaleX(1); }
   .join-step:hover { background: #111120; }
-  .step-num {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 4rem;
-    color: var(--accent);
-    opacity: 0.15;
-    line-height: 1;
-    margin-bottom: 1rem;
-  }
-  .step-title {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: var(--text);
-    margin-bottom: 0.8rem;
-  }
+  .step-num { font-family: 'Bebas Neue', cursive; font-size: 4rem; color: var(--accent); opacity: 0.15; line-height: 1; margin-bottom: 1rem; }
+  .step-title { font-family: 'Space Mono', monospace; font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; color: var(--text); margin-bottom: 0.8rem; }
   .step-text { font-size: 0.85rem; color: var(--muted); line-height: 1.7; }
 
-  /* DEVELOPERS SECTION */
-  .dev-section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 4rem;
-  }
+  .dev-section-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 4rem; }
   .dev-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -507,23 +401,16 @@
   }
   .dev-card:hover::after { opacity: 1; }
   .dev-card:hover { background: #0e0e1a; transform: translateY(-4px); }
-  .dev-card.featured {
-    border-top: 2px solid var(--accent);
-  }
+  .dev-card.featured  { border-top: 2px solid var(--accent); }
   .dev-card.featured2 { border-top: 2px solid var(--accent2); }
   .dev-card.featured3 { border-top: 2px solid var(--accent3); }
   .dev-card.featured4 { border-top: 2px solid #ff9500; }
   .dev-card.featured5 { border-top: 2px solid #ff2d97; }
+  .dev-card.featured6 { border-top: 2px solid #00cfff; }
+  .dev-card.featured7 { border-top: 2px solid #b8ff3c; }
+  .dev-card.featured8 { border-top: 2px solid #ff6b35; }
 
-  .dev-number {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 5rem;
-    line-height: 1;
-    color: var(--accent);
-    opacity: 0.07;
-    position: absolute;
-    top: 1rem; right: 1.5rem;
-  }
+  .dev-number { font-family: 'Bebas Neue', cursive; font-size: 5rem; line-height: 1; color: var(--accent); opacity: 0.07; position: absolute; top: 1rem; right: 1.5rem; }
   .dev-avatar {
     width: 60px; height: 60px;
     border-radius: 50%;
@@ -536,45 +423,28 @@
     position: relative;
     z-index: 1;
   }
-  .dev-card.featured .dev-avatar { background: rgba(255,45,85,0.15); color: var(--accent); box-shadow: var(--glow-r); }
-  .dev-card.featured2 .dev-avatar { background: rgba(0,245,160,0.15); color: var(--accent2); box-shadow: var(--glow-g); }
+  .dev-card.featured  .dev-avatar { background: rgba(255,45,85,0.15);  color: var(--accent);  box-shadow: var(--glow-r); }
+  .dev-card.featured2 .dev-avatar { background: rgba(0,245,160,0.15);  color: var(--accent2); box-shadow: var(--glow-g); }
   .dev-card.featured3 .dev-avatar { background: rgba(123,97,255,0.15); color: var(--accent3); }
-  .dev-card.featured4 .dev-avatar { background: rgba(255,149,0,0.15); color: #ff9500; }
+  .dev-card.featured4 .dev-avatar { background: rgba(255,149,0,0.15);  color: #ff9500; }
   .dev-card.featured5 .dev-avatar { background: rgba(255,45,151,0.15); color: #ff2d97; }
+  .dev-card.featured6 .dev-avatar { background: rgba(0,207,255,0.15);  color: #00cfff; }
+  .dev-card.featured7 .dev-avatar { background: rgba(184,255,60,0.15); color: #b8ff3c; }
+  .dev-card.featured8 .dev-avatar { background: rgba(255,107,53,0.15); color: #ff6b35; }
 
-  .dev-name {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 1.8rem;
-    letter-spacing: 2px;
-    color: var(--text);
-    margin-bottom: 0.3rem;
-    position: relative;
-    z-index: 1;
-  }
-  .dev-role {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.65rem;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 1.5rem;
-    position: relative;
-    z-index: 1;
-  }
-  .dev-card.featured .dev-role { color: var(--accent); }
+  .dev-name { font-family: 'Bebas Neue', cursive; font-size: 1.8rem; letter-spacing: 2px; color: var(--text); margin-bottom: 0.3rem; position: relative; z-index: 1; }
+  .dev-role { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 1.5rem; position: relative; z-index: 1; }
+  .dev-card.featured  .dev-role { color: var(--accent); }
   .dev-card.featured2 .dev-role { color: var(--accent2); }
   .dev-card.featured3 .dev-role { color: var(--accent3); }
   .dev-card.featured4 .dev-role { color: #ff9500; }
   .dev-card.featured5 .dev-role { color: #ff2d97; }
+  .dev-card.featured6 .dev-role { color: #00cfff; }
+  .dev-card.featured7 .dev-role { color: #b8ff3c; }
+  .dev-card.featured8 .dev-role { color: #ff6b35; }
 
   .dev-bio { font-size: 0.82rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.5rem; position: relative; z-index: 1; }
-
-  .dev-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-    position: relative;
-    z-index: 1;
-  }
+  .dev-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; position: relative; z-index: 1; }
   .tag {
     font-family: 'Space Mono', monospace;
     font-size: 0.6rem;
@@ -586,20 +456,9 @@
     transition: all 0.3s;
   }
   .dev-card:hover .tag { border-color: var(--accent); color: var(--text); }
-
-  .dev-stat {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-top: 1.5rem;
-    font-family: 'Space Mono', monospace;
-    font-size: 0.65rem;
-    color: var(--muted);
-    position: relative;
-    z-index: 1;
-  }
-  .dev-stat .highlight { color: var(--accent2); font-weight: 700; }
-  .dev-stat .highlight-r { color: var(--accent); font-weight: 700; }
+  .dev-stat { display: flex; align-items: center; gap: 0.5rem; margin-top: 1.5rem; font-family: 'Space Mono', monospace; font-size: 0.65rem; color: var(--muted); position: relative; z-index: 1; }
+  .dev-stat .highlight   { color: var(--accent2); font-weight: 700; }
+  .dev-stat .highlight-r { color: var(--accent);  font-weight: 700; }
 
   .hire-btn {
     margin-top: 1.5rem;
@@ -619,183 +478,43 @@
     position: relative;
     z-index: 1;
   }
-  .hire-btn:hover {
-    background: var(--accent);
-    color: var(--bg);
-    border-color: var(--accent);
-  }
+  .hire-btn:hover { background: var(--accent); color: var(--bg); border-color: var(--accent); }
 
-  /* HIRE SECTION */
-  .hire-section {
-    background: var(--surface);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-  }
-  .hire-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
-    align-items: start;
-  }
-  .hire-options {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1px;
-    background: var(--border);
-    margin-top: 2rem;
-  }
-  .hire-opt {
-    background: var(--bg);
-    padding: 2rem;
-    transition: all 0.3s;
-    cursor: none;
-  }
+  .hire-section { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .hire-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+  .hire-options { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); margin-top: 2rem; }
+  .hire-opt { background: var(--bg); padding: 2rem; transition: all 0.3s; cursor: none; }
   .hire-opt:hover { background: #0a0a14; }
-  .hire-opt-icon {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  .hire-opt-title {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 1.5rem;
-    letter-spacing: 2px;
-    margin-bottom: 0.5rem;
-  }
+  .hire-opt-icon { font-size: 2rem; margin-bottom: 1rem; }
+  .hire-opt-title { font-family: 'Bebas Neue', cursive; font-size: 1.5rem; letter-spacing: 2px; margin-bottom: 0.5rem; }
   .hire-opt-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
 
   .contact-form { margin-top: 2rem; }
   .form-group { margin-bottom: 1.5rem; }
-  .form-label {
-    display: block;
-    font-family: 'Space Mono', monospace;
-    font-size: 0.65rem;
-    letter-spacing: 2px;
-    color: var(--muted);
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
-  }
-  .form-input, .form-select, .form-textarea {
-    width: 100%;
-    background: var(--bg);
-    border: 1px solid var(--border);
-    color: var(--text);
-    padding: 0.8rem 1rem;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.9rem;
-    outline: none;
-    transition: border-color 0.3s;
-  }
-  .form-input:focus, .form-select:focus, .form-textarea:focus {
-    border-color: var(--accent);
-  }
+  .form-label { display: block; font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; margin-bottom: 0.5rem; }
+  .form-input, .form-select, .form-textarea { width: 100%; background: var(--bg); border: 1px solid var(--border); color: var(--text); padding: 0.8rem 1rem; font-family: 'Inter', sans-serif; font-size: 0.9rem; outline: none; transition: border-color 0.3s; }
+  .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--accent); }
   .form-select option { background: var(--bg); }
   .form-textarea { height: 100px; resize: none; }
-  .form-submit {
-    width: 100%;
-    background: var(--accent);
-    color: var(--bg);
-    border: none;
-    padding: 1rem;
-    font-family: 'Space Mono', monospace;
-    font-size: 0.75rem;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    cursor: none;
-    transition: all 0.3s;
-  }
+  .form-submit { width: 100%; background: var(--accent); color: var(--bg); border: none; padding: 1rem; font-family: 'Space Mono', monospace; font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase; cursor: none; transition: all 0.3s; }
   .form-submit:hover { background: var(--accent2); box-shadow: var(--glow-g); }
 
-  /* MARQUEE */
-  .marquee-section {
-    padding: 2rem 0;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    overflow: hidden;
-    background: var(--surface);
-  }
-  .marquee-inner {
-    display: flex;
-    animation: marquee 20s linear infinite;
-    white-space: nowrap;
-  }
-  .marquee-item {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 1.2rem;
-    letter-spacing: 4px;
-    color: var(--muted);
-    padding: 0 3rem;
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-  }
-  .marquee-item .dot {
-    width: 6px; height: 6px;
-    background: var(--accent);
-    border-radius: 50%;
-    display: inline-block;
-  }
-  @keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
+  .marquee-section { padding: 2rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); overflow: hidden; background: var(--surface); }
+  .marquee-inner { display: flex; animation: marquee 20s linear infinite; white-space: nowrap; }
+  .marquee-item { font-family: 'Bebas Neue', cursive; font-size: 1.2rem; letter-spacing: 4px; color: var(--muted); padding: 0 3rem; display: flex; align-items: center; gap: 3rem; }
+  .marquee-item .dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; display: inline-block; }
+  @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-  /* FOOTER */
-  footer {
-    padding: 4rem;
-    border-top: 1px solid var(--border);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .footer-logo {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 2rem;
-    letter-spacing: 6px;
-    color: var(--accent);
-  }
+  footer { padding: 4rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+  .footer-logo { font-family: 'Bebas Neue', cursive; font-size: 2rem; letter-spacing: 6px; color: var(--accent); }
   .footer-logo span { color: var(--muted); }
-  .footer-text {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.65rem;
-    color: var(--muted);
-    letter-spacing: 2px;
-    text-align: center;
-    line-height: 2;
-  }
-  .footer-links {
-    display: flex;
-    gap: 2rem;
-  }
-  .footer-links a {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.65rem;
-    color: var(--muted);
-    text-decoration: none;
-    letter-spacing: 2px;
-    transition: color 0.3s;
-  }
+  .footer-text { font-family: 'Space Mono', monospace; font-size: 0.65rem; color: var(--muted); letter-spacing: 2px; text-align: center; line-height: 2; }
+  .footer-links { display: flex; gap: 2rem; }
+  .footer-links a { font-family: 'Space Mono', monospace; font-size: 0.65rem; color: var(--muted); text-decoration: none; letter-spacing: 2px; transition: color 0.3s; }
   .footer-links a:hover { color: var(--accent); }
 
-  /* ANIMATE IN */
-  .fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.7s ease;
-  }
+  .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.7s ease; }
   .fade-in.visible { opacity: 1; transform: translateY(0); }
-
-  /* HIGHLIGHT STRIPE */
-  .stripe {
-    display: inline-block;
-    position: relative;
-  }
-  .stripe::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    height: 3px;
-    background: var(--accent);
-  }
 
   @media (max-width: 768px) {
     nav { padding: 1rem 1.5rem; }
@@ -858,6 +577,7 @@
     <div class="marquee-item">Full Stack Dev <span class="dot"></span></div>
     <div class="marquee-item">DSA Experts <span class="dot"></span></div>
     <div class="marquee-item">UI/UX Design <span class="dot"></span></div>
+    <div class="marquee-item">AI / ML <span class="dot"></span></div>
     <div class="marquee-item">We Built <span class="dot"></span></div>
     <div class="marquee-item">We Break <span class="dot"></span></div>
     <div class="marquee-item">We Innovate <span class="dot"></span></div>
@@ -865,13 +585,14 @@
     <div class="marquee-item">Full Stack Dev <span class="dot"></span></div>
     <div class="marquee-item">DSA Experts <span class="dot"></span></div>
     <div class="marquee-item">UI/UX Design <span class="dot"></span></div>
+    <div class="marquee-item">AI / ML <span class="dot"></span></div>
   </div>
 </div>
 
 <!-- STATS -->
 <div class="stats-bar fade-in">
   <div class="stat-item">
-    <div class="stat-num">5+</div>
+    <div class="stat-num">8+</div>
     <div class="stat-label">Core<br>Members</div>
   </div>
   <div class="stat-divider"></div>
@@ -933,13 +654,13 @@
     <div>
       <div class="section-label">The Team</div>
       <h2 class="section-title">DEVELOPER<br><span style="color:var(--accent)">SECTION</span></h2>
-      <p class="section-desc">Meet the minds behind Error Society. Each member brings a unique edge — from algorithmic mastery to pixel-perfect design.</p>
+      <p class="section-desc">Meet the minds behind Error Society. Eight specialists — from algorithmic mastery to AI/ML, embedded systems to biotechnology. Diverse depth, singular focus.</p>
     </div>
   </div>
 
   <div class="dev-grid">
 
-    <!-- Madhav Sharma -->
+    <!-- 01 Madhav Sharma -->
     <div class="dev-card featured fade-in">
       <div class="dev-number">01</div>
       <div class="dev-avatar">MS</div>
@@ -955,7 +676,7 @@
       <a class="hire-btn" href="#hire">Hire Madhav →</a>
     </div>
 
-    <!-- Aditya Agnihotri -->
+    <!-- 02 Aditya Agnihotri -->
     <div class="dev-card featured2 fade-in">
       <div class="dev-number">02</div>
       <div class="dev-avatar">AA</div>
@@ -977,7 +698,7 @@
       <a class="hire-btn" href="#hire">Hire Aditya →</a>
     </div>
 
-    <!-- Garvit Tyagi -->
+    <!-- 03 Garvit Tyagi -->
     <div class="dev-card featured3 fade-in">
       <div class="dev-number">03</div>
       <div class="dev-avatar">GT</div>
@@ -994,32 +715,34 @@
       <a class="hire-btn" href="#hire">Hire Garvit →</a>
     </div>
 
-    <!-- Akshat Singh -->
+    <!-- 04 Akshat Singh -->
     <div class="dev-card featured4 fade-in">
       <div class="dev-number">04</div>
       <div class="dev-avatar">AS</div>
       <div class="dev-name">Akshat Singh</div>
       <div class="dev-role">Figma Designer &amp; Java Developer</div>
-      <div class="dev-bio">Akshat bridges the gap between design and code. A Figma wizard and Java expert, he also brings a rare creative lens — his background in photography means every design decision is informed by composition, light, and visual storytelling.</div>
+      <div class="dev-bio">Akshat bridges the gap between design and code. A Figma wizard and Java expert, he also brings a rare creative lens — his background in photography means every design decision is informed by composition, light, and visual storytelling. Sharp algorithmic instincts round out his full-stack versatility.</div>
       <div class="dev-tags">
         <span class="tag">Figma</span>
         <span class="tag">Java</span>
         <span class="tag">UI/UX</span>
         <span class="tag">Photography</span>
+        <span class="tag">DSA</span>
         <span class="tag">Design</span>
       </div>
       <a class="hire-btn" href="#hire">Hire Akshat →</a>
     </div>
 
-    <!-- Abhay Dhoni -->
+    <!-- 05 Abhay Dhoni -->
     <div class="dev-card featured5 fade-in">
       <div class="dev-number">05</div>
       <div class="dev-avatar">AD</div>
       <div class="dev-name">Abhay Dhoni</div>
       <div class="dev-role">Strategy &amp; Problem Solving Specialist</div>
-      <div class="dev-bio">Discipline, precision, and a sharp mind. Abhay brings exceptional aptitude, deep knowledge of Indian history and geography, and the structured thinking of an Ex-NCC Cadet. His analytical edge makes him the team's strategic backbone.</div>
+      <div class="dev-bio">Discipline, precision, and a sharp mind. Abhay brings exceptional aptitude, deep knowledge of Indian history and geography, and the structured thinking of an Ex-NCC Cadet. His analytical edge and strong DSA foundation make him the team's strategic backbone.</div>
       <div class="dev-tags">
         <span class="tag">Aptitude</span>
+        <span class="tag">DSA</span>
         <span class="tag">Strategy</span>
         <span class="tag">NCC Cadet</span>
         <span class="tag">Geography</span>
@@ -1028,7 +751,66 @@
       <a class="hire-btn" href="#hire">Hire Abhay →</a>
     </div>
 
-    <!-- Hire Slot -->
+    <!-- 06 Abhinav -->
+    <div class="dev-card featured6 fade-in">
+      <div class="dev-number">06</div>
+      <div class="dev-avatar">AB</div>
+      <div class="dev-name">Abhinav</div>
+      <div class="dev-role">AI/ML Engineer &amp; Data Scientist</div>
+      <div class="dev-bio">Abhinav lives at the intersection of code and intelligence. Specializing in Python-powered AI/ML pipelines, deep learning architectures, and data science, he harnesses NumPy, Pandas, and neural networks to extract meaning from complexity. From raw datasets to predictive models — he builds systems that learn.</div>
+      <div class="dev-tags">
+        <span class="tag">Python</span>
+        <span class="tag">AI/ML</span>
+        <span class="tag">Deep Learning</span>
+        <span class="tag">Pandas</span>
+        <span class="tag">NumPy</span>
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">SQL</span>
+      </div>
+      <a class="hire-btn" href="#hire">Hire Abhinav →</a>
+    </div>
+
+    <!-- 07 Aditya Raj -->
+    <div class="dev-card featured7 fade-in">
+      <div class="dev-number">07</div>
+      <div class="dev-avatar">AR</div>
+      <div class="dev-name">Aditya Raj</div>
+      <div class="dev-role">ECE Engineer &amp; Embedded Systems</div>
+      <div class="dev-bio">Aditya Raj operates where hardware meets code. An Electronics & Communication Engineering student with deep expertise in signal processing, circuit design, and embedded systems — he built a line-following car from the ground up, demonstrating real-world control systems and sensor integration. He turns schematics into living machines.</div>
+      <div class="dev-tags">
+        <span class="tag">ECE</span>
+        <span class="tag">Signals</span>
+        <span class="tag">Embedded</span>
+        <span class="tag">Circuits</span>
+        <span class="tag">Robotics</span>
+        <span class="tag">Line Follower</span>
+      </div>
+      <div class="dev-stat">
+        <span>🤖 Project:</span><span class="highlight">Built Line-Following Car</span>
+      </div>
+      <a class="hire-btn" href="#hire">Hire Aditya Raj →</a>
+    </div>
+
+    <!-- 08 Ashish Singh -->
+    <div class="dev-card featured8 fade-in">
+      <div class="dev-number">08</div>
+      <div class="dev-avatar">ASI</div>
+      <div class="dev-name">Ashish Singh</div>
+      <div class="dev-role">Biotechnology &amp; Life Sciences Specialist</div>
+      <div class="dev-bio">Ashish brings an entirely distinct dimension to Error Society. A biotechnology student with hands-on industrial experience, he has applied microbiology and biophysical chemistry in real laboratory environments. His cross-disciplinary perspective bridges biological systems and technology — a rare edge in biotech, data, and research-driven projects.</div>
+      <div class="dev-tags">
+        <span class="tag">Biotechnology</span>
+        <span class="tag">Microbiology</span>
+        <span class="tag">Biophysics</span>
+        <span class="tag">Industrial Visit</span>
+        <span class="tag">Lab Research</span>
+        <span class="tag">Life Sciences</span>
+      </div>
+      <a class="hire-btn" href="#hire">Hire Ashish →</a>
+    </div>
+
+    <!-- Open Slot -->
     <div class="dev-card fade-in" style="border: 1px dashed var(--border); background: transparent; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; min-height: 300px;">
       <div style="font-family:'Bebas Neue',cursive; font-size:4rem; color:var(--muted); opacity:0.3;">+</div>
       <div style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:3px; color:var(--muted); text-transform:uppercase; margin-top:1rem;">Next Slot Open</div>
@@ -1090,8 +872,11 @@
             <option>Hire Madhav Sharma</option>
             <option>Hire Aditya Agnihotri (DSA)</option>
             <option>Hire Garvit Tyagi (Frontend)</option>
-            <option>Hire Akshat Singh (Design/Java)</option>
-            <option>Hire Abhay Dhoni (Strategy)</option>
+            <option>Hire Akshat Singh (Design/Java/DSA)</option>
+            <option>Hire Abhay Dhoni (Strategy/DSA)</option>
+            <option>Hire Abhinav (AI/ML)</option>
+            <option>Hire Aditya Raj (ECE/Embedded)</option>
+            <option>Hire Ashish Singh (Biotech)</option>
           </select>
         </div>
         <div class="form-group">
@@ -1147,7 +932,6 @@
 </footer>
 
 <script>
-  // Cursor
   const cursor = document.getElementById('cursor');
   const trail = document.getElementById('cursorTrail');
   document.addEventListener('mousemove', (e) => {
@@ -1169,24 +953,18 @@
     });
   });
 
-  // Fade-in on scroll
   const obs = new IntersectionObserver((entries) => {
     entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        obs.unobserve(e.target);
-      }
+      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
     });
   }, { threshold: 0.1 });
   document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 
-  // Stagger dev cards
   document.querySelectorAll('.dev-card').forEach((card, i) => {
-    card.style.transitionDelay = (i * 0.1) + 's';
+    card.style.transitionDelay = (i * 0.08) + 's';
   });
 </script>
 </body>
 </html>
-
 
 
